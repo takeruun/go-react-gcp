@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    volumes:
+      - ./backend:/go/src/app
+    ports:
+      - 3100:3100
+    tty: true
+    stdin_open: true
