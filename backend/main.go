@@ -4,7 +4,7 @@ import "net/http"
 
 func main() {
 	SetRouting()
-	http.ListenAndServe(":3100", nil)
+	http.ListenAndServe(":8080", nil)
 }
 
 func SetRouting() {
