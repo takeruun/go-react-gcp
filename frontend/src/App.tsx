@@ -3,8 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080'
+
 function App() {
   const [count, setCount] = useState(0)
+  const onClick = () => {
+    setCount((count) => count + 1)
+    fetch(API_URL+'/api').then((res) => res.json()).then((data) => {
+      console.log(data);
+    })
+  };
 
   return (
     <>
@@ -18,7 +26,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={onClick}>
           count is {count}
         </button>
         <p>
