@@ -7,6 +7,6 @@ services:
     volumes:
       - ./backend:/go/src/app
     ports:
-      - 3100:3100
+      - 8080:8080
     tty: true
     stdin_open: true
