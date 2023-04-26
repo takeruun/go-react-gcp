@@ -8,4 +8,7 @@ export default defineConfig({
     port: 3101,
     open: true
   },
+  build: {
+    outDir: '../backend/dist'
+  },
 })
